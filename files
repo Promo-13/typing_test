@@ -1,0 +1,52 @@
+// components/site-header.tsx
+import Link from 'next/link';
+import Button from './button';
+
+const SiteHeader = () => {
+  return (
+    <header className="bg-white p-4">
+      <nav className="flex justify-between">
+        <Link href="/" className="flex items-center gap-2 font-semibold text-[var(--tc-primary)] hover:opacity-90">
+          TypeClone
+        </Link>
+        <Button className="inline-flex items-center gap-2 bg-transparent border-[var(--tc-caret)] text-[var(--tc-primary)] hover:bg-[var(--tc-caret)] hover:text-white">
+          Themes
+        </Button>
+      </nav>
+    </header>
+  );
+};
+
+export default SiteHeader;
+
+// components/typing-test.tsx
+import Button from './button';
+import { RotateCcw } from 'lucide-react';
+
+const TypingTest = () => {
+  return (
+    <div className="bg-white p-4">
+      <Button className="gap-2 bg-transparent border-[var(--tc-caret)] text-[var(--tc-primary)] hover:bg-[var(--tc-caret)] hover:text-white">
+        <RotateCcw className="w-4 h-4" />
+        Restart
+      </Button>
+    </div>
+  );
+};
+
+export default TypingTest;
+
+// app/lessons/page.tsx
+import Button from '../components/button';
+
+const LessonsPage = () => {
+  return (
+    <div className="bg-white p-4">
+      <Button className="shrink-0 bg-transparent border-[var(--tc-caret)] text-[var(--tc-primary)] hover:bg-[var(--tc-caret)] hover:text-white">
+        Start
+      </Button>
+    </div>
+  );
+};
+
+export default LessonsPage;

@@ -48,7 +48,7 @@ export default function Page() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="shrink-0 bg-transparent border-[var(--tc-caret)] text-white"
+                  className="shrink-0 border-[var(--tc-caret)] bg-transparent text-[var(--tc-primary)] transition-colors hover:bg-[var(--tc-caret)] hover:text-white"
                 >
                   Start
                 </Button>

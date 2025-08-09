@@ -24,7 +24,7 @@ export function ThemePicker({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Choose a theme</DialogTitle>
         </DialogHeader>
@@ -35,19 +35,19 @@ export function ThemePicker({
               <button
                 key={t.id}
                 onClick={() => setSelected(t)}
-                className={`group relative flex items-center gap-3 rounded-lg border p-3 transition hover:shadow-sm ${
+                className={`group relative flex min-w-0 items-center gap-3 overflow-hidden rounded-lg border p-3 transition hover:shadow-sm ${
                   isActive ? "border-foreground" : "border-border"
                 }`}
                 aria-pressed={isActive}
               >
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 shrink-0">
                   {t.preview.map((c, i) => (
                     <span key={i} className="h-6 w-6 rounded-md border" style={{ backgroundColor: c }} aria-hidden />
                   ))}
                 </div>
-                <div className="text-left">
-                  <div className="text-sm font-medium">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.id}</div>
+                <div className="min-w-0 text-left">
+                  <div className="text-sm font-medium break-words">{t.name}</div>
+                  <div className="text-xs text-muted-foreground truncate">{t.id}</div>
                 </div>
               </button>
             )

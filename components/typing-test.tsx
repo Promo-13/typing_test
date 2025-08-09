@@ -341,7 +341,7 @@ export default function TypingTest({ mode = "time", duration = 30, wordsCount = 
                 variant="outline"
                 size="sm"
                 onClick={reset}
-                className="gap-2 bg-transparent border-[var(--tc-caret)] text-white"
+                className="gap-2 border-[var(--tc-caret)] bg-transparent text-[var(--tc-primary)] transition-colors hover:bg-[var(--tc-caret)] hover:text-white"
               >
                 <RotateCcw className="h-4 w-4" />
                 Restart
